@@ -1,0 +1,80 @@
+name: "Apache 2.5"
+image: "https://cdn.worldvectorlogo.com/logos/apache-13.svg"
+docker: okty/apache
+version: latest
+config: 
+  - 
+    id: apache_modules
+    label: ""
+    fields: 
+      - 
+        id: selectize
+        label: "Apache modules"
+        type: selectize
+        base: apache_modules
+        destination: dockerfile ### What location for a2enmod scripting ? 
+        value: a2mods
+  -   
+    id: vhosts
+    label: Virtual Hosts
+    fields:
+      - 
+        id: input
+        label: "Server Name"
+        type: input
+        base: server_name
+        destination: dockerfile
+      - 
+        id: input
+        label: "Server Aliases"
+        type: input
+        base: server_aliases
+        destination: dockerfile
+      - 
+        id: input
+        label: "Document Root"
+        type: input
+        base: document_root
+        destination: dockerfile
+      - 
+        id: input
+        label: "Volumes"
+        type: input
+        base: volumes
+        destination: volumes
+      - 
+        id: input
+        label: "Port"
+        type: input
+        base: port
+        destination: dockerfile
+      - 
+        id: input
+        label: "Directory Index"
+        type: input
+        base: directory_index
+        destination: dockerfile
+      - 
+        id: input
+        label: "Options"
+        type: input
+        base: options
+        destination: dockerfile
+      - 
+        id: input
+        label: "Allow Override"
+        type: input
+        base: allow_override
+        destination: dockerfile
+        value: all
+      - 
+        id: input
+        label: "Require"
+        type: input
+        base: require
+        destination: dockerfile
+        value: all
+
+
+
+        
