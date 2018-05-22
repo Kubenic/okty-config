@@ -5,7 +5,7 @@ version: latest
 config: 
   - 
     id: apache_modules
-    label: ""
+    label: Apache Modules
     fields: 
       - 
         id: selectize
