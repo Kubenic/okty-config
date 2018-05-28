@@ -13,7 +13,7 @@ config:
         type: selectize
         base: apache_modules
         destination: dockerfile ### What location for a2enmod scripting ? 
-        value: a2mods
+        value: 
         possibles:
           - cache
           - cgids 
